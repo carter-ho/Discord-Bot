@@ -4,17 +4,19 @@ My first attempt at a Discord Bot
 
 ## Commands
 
-```!hello```
+```!hello```  
 Bot messages @[user]
 
-```!randomUseless```
+```!randomUseless```  
+
 Bot messages a random fact from https://uselessfacts.jsph.pl/
 
-```!dailyUseless```
+```!dailyUseless```  
+
 Bot messages the daily fact from https://uselessfacts.jsph.pl/
 
 
 ## To-Do List
-Timer Function
-Alarm Function
-Dice system
+- Timer Function
+- Alarm Function
+- Dice system
