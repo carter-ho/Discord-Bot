@@ -19,7 +19,14 @@ Bot messages the daily fact from https://uselessfacts.jsph.pl/
 
 Creates a meme regarding the character Seihai-Kun from the anime Carnival Phantasm
 
+```!dice [X]```  
+
+Returns a value between 1 and X, inclusive. Truncates non-integers, does not work with negative values
+
+```!copy [Y]```  
+
+Bot repeats the message Y
+
 ## To-Do List
-- Timer Function
-- Alarm Function
-- Dice system
+- Get weather given some information
+- Something that checks for reactions, deletes message
