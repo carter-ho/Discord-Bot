@@ -15,6 +15,9 @@ Bot messages a random fact from https://uselessfacts.jsph.pl/
 
 Bot messages the daily fact from https://uselessfacts.jsph.pl/
 
+```!helpMe```  
+
+Creates a meme regarding the character Seihai-Kun from the anime Carnival Phantasm
 
 ## To-Do List
 - Timer Function

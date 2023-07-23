@@ -2,6 +2,10 @@ import discord
 import requests
 from discord.ext import commands
 import constants
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
+import os
 
 
 discord_key = constants.discord_key
@@ -38,5 +42,20 @@ async def salute(ctx): #context gets passed into the first parameter
     print(str(ctx.message.author))
     print(str(ctx.message.channel))
     print(str(ctx.message.content))
+
+@bot.command(pass_contex = True)
+async def helpMe(ctx, *, arg):
+    text = arg
+    img = Image.open('images/wish.png')
+    I1 = ImageDraw.Draw(img)
+    myFont = ImageFont.truetype("fonts/arial_bold.ttf",100)
+    # 122, 371
+    I1.text((122,371), text, font=myFont, fill=(255,255,255), stroke_width=10, stroke_fill=(0,0,0))
+    location = "images/wishMeme.png"
+    img.save(location)
+    picture = discord.File(location)
+    await ctx.send(file=picture)
+    if(os.path.exists(location)):
+        os.remove(location)
             
 bot.run(discord_key)
