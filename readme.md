@@ -17,7 +17,7 @@ Bot sends the daily fact from https://uselessfacts.jsph.pl/
 
 ```!helpme```  
 
-Bot sends a meme edit of a scene of the character Seihai-Kun from the anime Carnival Phantasm.
+Bot sends one of two meme edits of a scene of the character Seihai-Kun from the anime Carnival Phantasm.
 
 ```!artofwar```  
 
@@ -33,5 +33,6 @@ Bot sends the message Y
 
 ## To-Do List
 - Center meme text
+- try making wish flicker between two versions
 - Get weather given some information
 - Something that checks for reactions, deletes message

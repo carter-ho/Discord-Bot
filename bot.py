@@ -55,11 +55,20 @@ async def salute(ctx): #context gets passed into the first parameter
 @bot.command(pass_contex = True)
 async def helpme(ctx, *, arg):
     text = arg + " Kit!"
-    img = Image.open('images/wish.png')
+    randomNum = random.randint(0, 1)
+    img = ""
+    if(randomNum):
+        img = Image.open('images/wish.png')
+    else:
+        img = Image.open('images/wish2.png')
+    
     I1 = ImageDraw.Draw(img)
     myFont = ImageFont.truetype("fonts/trebuc.ttf", 110)
     # 122, 371
-    I1.text((180,500), text, font=myFont, fill=(255,255,255), stroke_width=10, stroke_fill=(0,0,0))
+    if(randomNum):
+        I1.text((180,500), text, font=myFont, fill=(255,255,255), stroke_width=10, stroke_fill=(0,0,0))
+    else:
+        I1.text((122,371), text, font=myFont, fill=(255,255,255), stroke_width=10, stroke_fill=(0,0,0))
     location = "images/wishMeme.png"
     img.save(location)
     picture = discord.File(location)
