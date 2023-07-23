@@ -7,19 +7,19 @@ My first attempt at a Discord Bot
 ```!hello```  
 Bot messages @[user]
 
-```!randomUseless```  
+```!randomuseless```  
 
 Bot sends a random fact from https://uselessfacts.jsph.pl/
 
-```!dailyUseless```  
+```!dailyuseless```  
 
 Bot sends the daily fact from https://uselessfacts.jsph.pl/
 
-```!helpMe```  
+```!helpme```  
 
 Bot sends a meme edit of a scene of the character Seihai-Kun from the anime Carnival Phantasm
 
-```!SunTzu```  
+```!artofwar```  
 
 Bot sends a random quote from the Art of War
 
@@ -32,5 +32,6 @@ Bot sends a value between 1 and X, inclusive. Truncates non-integers, does not w
 Bot sends the message Y
 
 ## To-Do List
+- Center meme text
 - Get weather given some information
 - Something that checks for reactions, deletes message
