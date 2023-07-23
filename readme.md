@@ -5,7 +5,7 @@ My first attempt at a Discord Bot
 ## Commands
 
 ```!hello```  
-Bot messages @[user]
+Bot says hello to the user that invoked the command
 
 ```!randomuseless```  
 
@@ -17,15 +17,15 @@ Bot sends the daily fact from https://uselessfacts.jsph.pl/
 
 ```!helpme```  
 
-Bot sends a meme edit of a scene of the character Seihai-Kun from the anime Carnival Phantasm
+Bot sends a meme edit of a scene of the character Seihai-Kun from the anime Carnival Phantasm.
 
 ```!artofwar```  
 
-Bot sends a random quote from the Art of War
+Bot sends a random quote from the Art of War. Credit for the quotes.json file used goes to github:mattdesl
 
 ```!dice [X]```  
 
-Bot sends a value between 1 and X, inclusive. Truncates non-integers, does not work with negative values
+Bot sends a value between 1 and X, inclusive. Truncates non-integers, does not work with negative values.
 
 ```!copy [Y]```  
 
