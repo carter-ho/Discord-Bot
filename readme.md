@@ -9,23 +9,27 @@ Bot messages @[user]
 
 ```!randomUseless```  
 
-Bot messages a random fact from https://uselessfacts.jsph.pl/
+Bot sends a random fact from https://uselessfacts.jsph.pl/
 
 ```!dailyUseless```  
 
-Bot messages the daily fact from https://uselessfacts.jsph.pl/
+Bot sends the daily fact from https://uselessfacts.jsph.pl/
 
 ```!helpMe```  
 
-Creates a meme regarding the character Seihai-Kun from the anime Carnival Phantasm
+Bot sends a meme edit of a scene of the character Seihai-Kun from the anime Carnival Phantasm
+
+```!SunTzu```  
+
+Bot sends a random quote from the Art of War
 
 ```!dice [X]```  
 
-Returns a value between 1 and X, inclusive. Truncates non-integers, does not work with negative values
+Bot sends a value between 1 and X, inclusive. Truncates non-integers, does not work with negative values
 
 ```!copy [Y]```  
 
-Bot repeats the message Y
+Bot sends the message Y
 
 ## To-Do List
 - Get weather given some information
