@@ -15,6 +15,14 @@ Bot sends a random fact from https://uselessfacts.jsph.pl/
 
 Bot sends the daily fact from https://uselessfacts.jsph.pl/
 
+```!randomcat```
+
+Bot sends a picture of a random cat from The Cat API
+
+```!randomdog```
+
+Bot sends a picture of a random dog from The Dog API
+
 ```!helpme```  
 
 Bot sends one of two meme edits of a scene of the character Seihai-Kun from the anime Carnival Phantasm.
