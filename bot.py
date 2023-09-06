@@ -125,11 +125,21 @@ async def helpme(ctx, *, arg):
 
 @bot.command(pass_contex = False)
 async def artofwar(ctx):
-    f = open("jsons/quotes.json")
+    f = open("./jsons/artofwar.json")
     data = json.load(f)
     upper = len(data)
     randomNum = random.randint(0, upper-1)
     await ctx.send(data[randomNum])
+
+@bot.command(pass_context = False)
+async def magic8ball(ctx):
+    f = open("./jsons/8ball.json")
+    data = json.load(f)
+    numResponseTypes = len(data)
+    responseType = random.randint(0, numResponseTypes-1)
+    numResponses = len(data[responseType])
+    responseNum = random.randint(0, numResponses-1)
+    await ctx.send(data[responseType][responseNum])
 
 @bot.command(pass_contex = False)
 async def dice(ctx, arg):
