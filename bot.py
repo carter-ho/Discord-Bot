@@ -3,10 +3,13 @@ import json
 import random
 import discord
 import requests
+import asyncio
+from holodex.client import HolodexClient
 from discord.ext import commands
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+
 
 import constants
 
@@ -69,6 +72,7 @@ async def hello(ctx):
     msg = 'Hello {0.author.mention}'.format(ctx.message)
     await ctx.send(msg)
 
+# API CALLS
 
 # Daily Useless Fact
 @bot.command(pass_context=False)
@@ -95,6 +99,26 @@ async def randomdog(ctx):
     randomDog = requests.get("https://api.thedogapi.com/v1/images/search")
     await ctx.send(randomDog.json()[0]["url"])
 
+@bot.command(pass_contex=False)
+async def hololive(ctx):
+    response = requests.get("https://holodex.net/api/v2/live", params={'status':'live', 'type':'stream', 'org':'Hololive'}, headers={'X-APIKEY':constants.holodex_key })
+    items = json.loads(response.text)
+
+    output = ''
+
+    for key in items:
+        if(key['topic_id'] == 'membersonly'):
+            continue
+        stream_info = '## ' +  key['channel']['name']  + '\n### ' + key['title'] + '\n' + '<https://www.youtube.com/watch?v=' + key['id']  +'>\n\n'
+        if len(output) + len(stream_info) > 2000:
+                await ctx.send(output)
+                output  = ''
+        output += stream_info
+        
+    # send final    
+    await ctx.send(output)
+
+# NON-API
 
 # Testing function
 @bot.command(pass_context=True)  # passing context
@@ -186,9 +210,11 @@ async def dice(ctx, arg):
         await ctx.send(rand)
 
 
+
 @bot.command(pass_contex=True)
 async def copy(ctx, *, arg):
     await ctx.send(arg)
+
 
 
 
